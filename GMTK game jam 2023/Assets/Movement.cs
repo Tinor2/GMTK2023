@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     public float SpeedCap;
     private float currentSpeed;
     [SerializeField] float accel;
+
+    public bool MovementTrue;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,9 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LAMouse();
-        
+        if (MovementTrue) LAMouse();
+
+
 
     }
     public void LAMouse()
@@ -32,12 +35,10 @@ public class Movement : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle - 90,
             transform.forward);
         m_transform.rotation = rotation;
+        
         if (Input.GetKey(KeyCode.W)) {
-            for (currentSpeed = 0; currentSpeed <= SpeedCap; currentSpeed += accel) Debug.Log("Acellearte");
-            transform.position += new Vector3(direction.x * currentSpeed * Time.deltaTime, direction.y * currentSpeed * Time.deltaTime, 0); ;
-        }
-        if (Input.GetKeyUp(KeyCode.W)) {
-            for (currentSpeed = SpeedCap; currentSpeed >= 0; currentSpeed -= accel) Debug.Log("Acellearte");
+            transform.position += new Vector3(direction.x * SpeedCap * Time.deltaTime, direction.y * SpeedCap * Time.deltaTime, 0);
+
         }
     }
 }
