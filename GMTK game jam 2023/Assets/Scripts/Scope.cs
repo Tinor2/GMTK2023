@@ -17,7 +17,7 @@ public class Scope : MonoBehaviour
     public float phaseSpeed;
 
     public bool isphaseready;
-    public LineRenderer CircleRendeer;
+    [SerializeField] LineRenderer CircleRendeer;
 
     private void Start()
     {
@@ -72,7 +72,7 @@ public class Scope : MonoBehaviour
         // this bit is the bit that pauses for a frame
         
         movement.MovementTrue = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.75f);
         isphaseready = true;
 
     }

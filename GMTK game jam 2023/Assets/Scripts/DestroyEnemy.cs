@@ -5,7 +5,7 @@ using UnityEngine.XR;
 
 public class DestroyEnemy : MonoBehaviour
 {
-    BloodTimer bloodtimer;
+    [SerializeField] BloodTimer bloodtimer;
     [SerializeField] GameObject kills;
     bool yedestroy;
     // Start is called before the first frame update
@@ -17,8 +17,9 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (collision.tag == "Enemy") {
 
+            bloodtimer.KillCount += 1;
             Destroy(collision.gameObject);
-            bloodtimer.KillCount++;
+            
         }
     }
 

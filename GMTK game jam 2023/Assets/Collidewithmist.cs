@@ -17,8 +17,9 @@ public class Collidewithmist : MonoBehaviour
     {
         
     }
-    private void OnParticleTrigger()
+    private void OnParticleTrigger(GameObject particle)
     {
         bloodTimer.currentTimeLeft -= decrement;
+        Debug.Log("fsdasfsdafsdsdfsdfsafdsfsddfs");
     }
 }

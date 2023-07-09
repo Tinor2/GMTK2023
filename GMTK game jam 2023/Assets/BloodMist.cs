@@ -11,7 +11,8 @@ public class BloodMist : MonoBehaviour
     [SerializeField] float cooldown;
     [SerializeField] float timer2;
     [SerializeField] float cooldown2;
-    PlayerDetection playerDetection;
+    [SerializeField] PlayerDetection playerDetection;
+    [SerializeField] GameObject playerDetection2;
 
 
 
@@ -19,8 +20,9 @@ public class BloodMist : MonoBehaviour
     void Start()
     {
         gap = true;
-        
-        
+        PlayerDetection playerDetection = playerDetection2.GetComponent<PlayerDetection>();
+
+
     }
 
     // Update is called once per frame

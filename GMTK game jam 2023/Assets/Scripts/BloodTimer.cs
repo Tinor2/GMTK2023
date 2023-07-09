@@ -8,6 +8,7 @@ public class BloodTimer : MonoBehaviour
     public float currentTimeLeft;
     public int KillCount;
     private int lastkill;
+    [SerializeField] float increment;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,10 @@ public class BloodTimer : MonoBehaviour
             //If there has been a recent kill
             if (KillCount > lastkill)
             {
+                if (increment > HealthDuration - currentTimeLeft) { currentTimeLeft = HealthDuration; }
+                else { currentTimeLeft += increment; }
                 //Reset timer
-                currentTimeLeft = HealthDuration;
+                
                 //Set the last kill to the current kill count
                 lastkill = KillCount;
             }
@@ -36,10 +39,6 @@ public class BloodTimer : MonoBehaviour
         {
         }
         //Place holder trigger
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            //Increase killcount
-            KillCount++;
-        }
+        
     }
 }

@@ -15,8 +15,6 @@ public class PlayerDetection : MonoBehaviour
 
     [SerializeField] Vector3 playerTransform;
 
-    [SerializeField] int steps;
-    [SerializeField] float radius;
 
 
     // Start is called before the first frame update
@@ -28,7 +26,7 @@ public class PlayerDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DrawCircle(steps, radius);
+        
         if (playerTransform != null) {
         }
         if (timer >= idleThreshold)
@@ -61,21 +59,5 @@ public class PlayerDetection : MonoBehaviour
         }
     }
 
-    void DrawCircle(int steps, float radius)
-    {
-        CircleRendeer.loop = true;  // Cela ferme le cercle
-        CircleRendeer.positionCount = steps;
-
-        float angle = 0f;
-
-        for (int i = 0; i < steps; i++)
-        {
-            float x = radius * Mathf.Cos(angle);
-            float y = radius * Mathf.Sin(angle);
-
-            CircleRendeer.SetPosition(i, new Vector3(x, y, 0f));
-
-            angle += 2f * Mathf.PI / steps;
-        }
-    }
+    
 }
