@@ -15,6 +15,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] float changeTarget;
 
 
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +31,16 @@ public class Spawner : MonoBehaviour
     {
         stopwatch += Time.deltaTime;
         transform.position = Vector3.SmoothDamp(transform.position, targetLocation, ref velocity, damping);
-        if (stopwatch >= changeTarget) {
+        if (stopwatch >= changeTarget)
+        {
             targetLocation = ThePlacesYoullGo[Random.Range(0, LengthOfList)];
             stopwatch = 0;
         }
         
+
     }
 }
+
+
+        
+                     

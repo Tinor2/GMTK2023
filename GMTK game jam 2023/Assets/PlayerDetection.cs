@@ -46,7 +46,6 @@ public class PlayerDetection : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Player");
             idle = false;
             timer = 0;
         }

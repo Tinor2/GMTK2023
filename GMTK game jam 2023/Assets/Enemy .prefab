@@ -82,8 +82,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   timer2: 0
-  ThreatThreshold: 5
-  idleThreshold: 10
+  ThreatThreshold: 20
+  idleThreshold: 40
   idle: 0
   parent: {fileID: 0}
 --- !u!1 &6932682210799809411
@@ -99,8 +99,8 @@ GameObject:
   - component: {fileID: -5673848382689841032}
   m_Layer: 0
   m_Name: 'Enemy '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Enemy
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

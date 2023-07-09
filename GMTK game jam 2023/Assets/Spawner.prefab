@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2304010255647343850}
   - component: {fileID: 5520020765444398556}
   - component: {fileID: -2278429448942584834}
+  - component: {fileID: 5473307287013023913}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -106,9 +107,27 @@ MonoBehaviour:
   - {x: -41.3, y: -0.6577654, z: -0.8165098}
   - {x: -13.547907, y: -52.2, z: -0.8165098}
   - {x: -7.2, y: 1, z: -0.8165098}
-  - {x: 0, y: 0, z: 0}
+  - {x: 32.840046, y: -10.828838, z: -0.8165098}
+  - {x: 37, y: -27.4, z: -0.8165098}
+  - {x: 33.9, y: -16.4, z: -0.8165098}
   targetLocation: {x: 0, y: 0, z: 0}
   damping: 10
   LengthOfList: 0
   stopwatch: 0
   changeTarget: 3
+--- !u!114 &5473307287013023913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112273269525882538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c6ad5f4b7c0ba4e8ddeeab1a3d43ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopwatch2: 0
+  cloneTime: 20
+  EnemyPrefab: {fileID: 0}
+  CurrentPos: {x: 0, y: 0, z: 0}

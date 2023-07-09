@@ -60,7 +60,7 @@ public class Scope : MonoBehaviour
         while (player.transform.position != new Vector3(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y, 0f))
         {
             movement.MovementTrue = false;
-            player.transform.position = Vector2.MoveTowards(player.transform.position, lineRenderer.GetPosition(1), phaseSpeed);
+            player.transform.position = Vector2.MoveTowards(player.transform.position, lineRenderer.GetPosition(1),Mathf.SmoothStep(0,1, phaseSpeed));
             yield return null;
         }
         // this bit is the bit that pauses for a frame
