@@ -16,6 +16,7 @@ public class Scope : MonoBehaviour
     public float damping;
     public float phaseSpeed;
 
+    public bool isphaseready;
     public LineRenderer CircleRendeer;
 
     private void Start()
@@ -23,6 +24,7 @@ public class Scope : MonoBehaviour
         m_transform = this.transform;
         Movement movement = player.GetComponent<Movement>();
         DrawCircle(steps,radius);
+        isphaseready = true;
     }
 
     private void Update()
@@ -46,9 +48,12 @@ public class Scope : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                movement.MovementTrue = false;
-                StartCoroutine(Phase());
-                movement.MovementTrue = true;
+                if (isphaseready)
+                {
+                    movement.MovementTrue = false;
+                    StartCoroutine(Phase());
+                    movement.MovementTrue = true;
+                }
 
 
             }
@@ -57,6 +62,7 @@ public class Scope : MonoBehaviour
     }
     IEnumerator Phase()
     {
+        isphaseready = false;
         while (player.transform.position != new Vector3(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y, 0f))
         {
             movement.MovementTrue = false;
@@ -64,7 +70,11 @@ public class Scope : MonoBehaviour
             yield return null;
         }
         // this bit is the bit that pauses for a frame
+        
         movement.MovementTrue = true;
+        yield return new WaitForSeconds(0.5f);
+        isphaseready = true;
+
     }
     void DrawCircle(int steps, float radius)
     {

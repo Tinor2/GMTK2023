@@ -35,13 +35,13 @@ public class Opposite : MonoBehaviour
         PlayerDetection playerDetection = PlayerDetector.GetComponent<PlayerDetection>();
         
 
-        enemydestinationlu = new Vector3(-66.1999969f, -1.29999995f, -0.290727437f);
-        enemydestinationln = new Vector3(-66.1999969f, 50.7999992f, -0.290727437f);
-        enemydestinationld = new Vector3(-66.1999969f, -52.2000008f, -0.290727437f);
+        enemydestinationlu = new Vector3((float)-66.1999969, (float)-1.29999995, (float)-0.290727437);
+        enemydestinationln = new Vector3((float)-66.1999969, (float)50.7999992, (float)-0.290727437);
+        enemydestinationld = new Vector3((float)-66.1999969, (float)-52.2000008, (float)-0.290727437);
                            
-        enemydestinationrn = new Vector3(65.8000031f, -1.29999995f, -0.290727437f);
-        enemydestinationru = new Vector3(65.8000031f, 50.7999992f, -0.290727437f);
-        enemydestinationrd = new Vector3(65.8000031f, -51.4000015f, -0.290727437f);
+        enemydestinationrn = new Vector3((float)65.8000031, (float)-1.29999995, (float)-0.290727437);
+        enemydestinationru = new Vector3((float)65.8000031, (float)50.7999992, (float)-0.290727437);
+        enemydestinationrd = new Vector3((float)65.8000031, (float)-51.4000015, (float)-0.290727437);
 
     }
     private void Start()

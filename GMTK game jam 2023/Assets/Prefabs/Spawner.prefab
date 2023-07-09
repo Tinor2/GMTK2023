@@ -128,6 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopwatch2: 0
-  cloneTime: 10
+  cloneTime: 15
   EnemyPrefab: {fileID: 0}
   CurrentPos: {x: 0, y: 0, z: 0}

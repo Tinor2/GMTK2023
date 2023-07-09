@@ -5,7 +5,7 @@ using UnityEngine;
 public class BloodTimer : MonoBehaviour
 {
     public float HealthDuration;
-    private float currentTimeLeft;
+    public float currentTimeLeft;
     public int KillCount;
     private int lastkill;
     // Start is called before the first frame update
