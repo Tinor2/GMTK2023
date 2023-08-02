@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BloodTimer : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class BloodTimer : MonoBehaviour
         }
         if (currentTimeLeft <= 0)
         {
+            SceneManager.LoadScene(4);
         }
         //Place holder trigger
         

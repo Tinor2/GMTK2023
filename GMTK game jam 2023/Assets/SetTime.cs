@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class Collidewithmist : MonoBehaviour
+public class SetTime : MonoBehaviour
 {
-    [SerializeField] BloodTimer bloodTimer;
-    [SerializeField] float decrement;
+    [SerializeField] TMP_Text TimeLeftText;
+    [SerializeField] BloodTimer BloodTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,6 @@ public class Collidewithmist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TimeLeftText.text = (Mathf.Round(BloodTimer.currentTimeLeft*100f)/100f).ToString();
     }
-    
 }

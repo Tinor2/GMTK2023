@@ -46,7 +46,7 @@ public class Scope : MonoBehaviour
 
 
             }
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.F))
             {
                 if (isphaseready)
                 {
